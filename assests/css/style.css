@@ -1,0 +1,199 @@
+body{
+    font-family: sans-serif;
+    background-color: gray;
+    margin: 0;
+}
+
+#Todo-App-Container{
+    width: 84%;
+    margin: auto;
+    background-color: white;
+}
+
+#Todo-App-Container h1{
+    text-align: center;
+    border-bottom: 1px solid lightgrey;
+    color: white;
+    margin: 0;
+    padding: 30px 20px 10px;
+    font-family: 'Titillium Web', sans-serif;
+    background-color: midnightblue;
+}
+
+#Todo-App-Container #description-box{
+    padding: 15px 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+#Todo-App-Container #description-box input{
+    width: 97%;
+    border: 0;
+    font-size: 20px;
+    color: grey;
+}
+
+#Todo-App-Container #description-box input:focus{
+    outline: none;
+    background-color: lightgray;
+}
+
+#Todo-App-Container #categories-container{
+    display: flex;
+    border-bottom: 1px solid lightgrey;
+}
+
+#Todo-App-Container #category-box{
+    width: 48%;
+    border-right: 1px solid lightgray;
+    padding: 15px 20px;
+}
+
+#Todo-App-Container #category-box select{
+    border: 0;
+    font-size: 18px;
+    color: gray;
+    width: 100%;
+}
+
+#Todo-App-Container #category-box select:focus{
+    outline: none;
+}
+#Todo-App-Container #date-box{
+    width: 48%;
+    padding: 15px;
+}
+
+#Todo-App-Container #date-box input{
+    width: 98%;
+    border: 0;
+    font-family: sans-serif;
+    color: grey;
+    font-size: 16px;
+}
+
+#Todo-App-Container #date-box input:focus{
+    outline: none;
+}
+
+#Todo-App-Container #add-btn{
+    text-align: center;
+    padding: 40px;
+    border-bottom: 1px solid lightgray;
+}
+
+#Todo-App-Container #add-btn button{
+    padding: 20px 0px;
+    font-size: 18px;
+    width: 187px;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #444444;
+}
+
+#Todo-App-Container #add-btn .padd-left{
+    padding-left: 10px;
+}
+
+/* ADD LIST ITEM CONTAINER */
+#Todo-list-container{
+    border-bottom: 1px solid lightgray;
+    color: gray;
+    list-style: none;
+    padding: 16px 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#Todo-list-container .box1{
+    width: 87%;
+}
+
+#Todo-list-boxes{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#Todo-list-container input{
+    width: 20px;
+    height: 20px;
+}
+
+#Todo-list-container #del-btn{
+    background-color: #EE351E;
+    height: 46px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 0
+}
+
+#Todo-list-container #del-btn a{
+    color: white;
+    text-decoration: none;
+}
+
+#Todo-list-container .padd-left{
+    padding-left: 5px;
+}
+
+#Todo-list-container .Todo-list-box{
+    color: gray;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+    background-color: rebeccapurple;
+}
+
+#Todo-list-container .Todo-list-box  p{
+    margin: 0px;
+    padding: 5px;
+    width: 69px;
+    text-align: center;
+}
+
+#Todo-list-container .date-box .date{
+    margin-left: -7px
+}
+
+#Todo-list-container .date-box .clndr-logo{
+    margin-left: 45px;
+    padding-right: 15px;
+}
+
+#Todo-list-container .date-box p{
+    margin : 0;
+}
+
+#Todo-list-container .checkbox{
+    margin-top: 15px;
+    display: flex;
+    width: 50%;
+}
+
+#Todo-list-container .checkbox p{
+    padding-left: 20px;
+    margin-top: 0px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: gray;
+}
+
+/* COMMON HEADING */
+#Todo-App-Container h3{
+    margin: 3px;
+    color: gray;
+}
+
+/* ul padding decrease */
+ul{
+    padding-left: 8px;
+}
+
+/* add checkbox checked  and line-through p*/
+input:checked + #strike{
+    text-decoration: line-through;
+}

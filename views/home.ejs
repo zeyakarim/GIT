@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- ADD TO DO LIST CONTAINER -->
+    <div id="Todo-App-Container">
+        <h1>TODO App</h1>
+
+        <!-- ADD FORM  -->
+        <form id="new-task-add-form" action="/create-todolist" method="post">
+            <div id="description-box">
+                <h3>DESCRIPTION</h3>
+                <input type="text" name="description"  placeholder="What do you need to do?" required>
+            </div>
+            
+            <div id="categories-container">
+                <div id="category-box">
+                    <h3>CATEGORY</h3>
+                    <select name="categories" id="category" form="new-task-add-form" required>
+                        <option value="" selected>Choose a category</option>
+                        <option value="personal">Personal</option>
+                        <option value="work">Work</option>
+                        <option value="school">School</option>
+                        <option value="cleaning">Cleaning</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div id="date-box">
+                    <h3>Due Date</h3>
+                    <input type="date" name="date" required>
+                </div>
+            </div>
+
+            <div id="add-btn">
+                <button type="submit" >
+                    <i class="fa-solid fa-plus"><span class="padd-left">Add Task</span></i>
+                </button>
+
+            </div>
+        </form>
+
+        
+        <!-- ADD TODO-LIST-ITEM -->
+        <div id="list-Container">
+            <ul>
+                <% for (let i of todo_list){%>
+                    <li id="Todo-list-container">
+                        <div class="box1">
+                            <div id="Todo-list-boxes">
+                                <div class="checkbox">
+                                    <input type="checkbox" name="check">
+                                    <p id="strike"><%=i.description%></p>
+                                </div>
+                                <div class="Todo-list-box">
+                                    <p><%=i.categories%></p>
+                                </div>
+                            </div>
+    
+                            <div class="date-box" style="display: flex;">
+                                <p class="clndr-logo"><i class="fa-solid fa-calendar-days" style="color: midnightblue;"></i></p>
+                                <p class="date"><%=i.date%></p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button type="submit" id="del-btn">
+                                <a href="/delete-todolist-item/?id=<%=i._id%>">
+                                    <i class="fa-solid fa-trash-can"></i><span class="padd-left">Delete Tasks</span></i>
+                                </a>
+                            </button>
+                        </div>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
