@@ -1,7 +1,0 @@
-phone
-
-touchscreen
-scratchless-gorilla glass
-
-BackCover,SunGlasses
-BackCover,SunGlasses,glass
